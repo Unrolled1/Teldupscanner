@@ -1,0 +1,16 @@
+[
+  {
+    "name": "test",
+    "replacements": [
+      {
+        "search": "#Ghislaine_Dedoldia",
+        "replace": "#GhislaineDedoldia"
+      },
+      {
+        "search": "#Honkai_Starrail",
+        "replace": "#HonkaiStarrail"
+      }
+    ],
+    "created": "2026-08-08 16:22:54"
+  }
+]
