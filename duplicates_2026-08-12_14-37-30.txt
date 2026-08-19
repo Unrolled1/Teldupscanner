@@ -1,0 +1,145 @@
+DUPLICATE MEDIA DELETED - 2026-08-12 14:37:30
+Channel: EveAniA
+Total messages scanned: 15780
+Media types checked: photo, video, gif, document, sticker, voice, audio
+Limit: ALL messages
+======================================================================
+
+DUPLICATE GROUP #1 (Photos)
+Media ID: photo_5825610709230882170
+Total copies: 2
+--------------------------------------------------
+
+ORIGINAL (KEPT):
+   Message ID: 14227
+   Date: 2026-05-30 14:04:02
+   Link: https://t.me/EveAniA/14227
+
+DELETED DUPLICATES:
+   #1 Message ID: 17540
+      Date: 2026-08-07 21:08:38
+      Link: https://t.me/EveAniA/17540
+      ---
+
+======================================================================
+
+DUPLICATE GROUP #2 (Photos)
+Media ID: photo_5821439814950129827
+Total copies: 2
+--------------------------------------------------
+
+ORIGINAL (KEPT):
+   Message ID: 14169
+   Date: 2026-05-28 22:57:27
+   Link: https://t.me/EveAniA/14169
+
+DELETED DUPLICATES:
+   #1 Message ID: 17454
+      Date: 2026-08-06 21:34:34
+      Link: https://t.me/EveAniA/17454
+      ---
+
+======================================================================
+
+DUPLICATE GROUP #3 (Photos)
+Media ID: photo_5821439814950129828
+Total copies: 2
+--------------------------------------------------
+
+ORIGINAL (KEPT):
+   Message ID: 14170
+   Date: 2026-05-28 22:57:48
+   Link: https://t.me/EveAniA/14170
+
+DELETED DUPLICATES:
+   #1 Message ID: 17452
+      Date: 2026-08-06 21:15:43
+      Link: https://t.me/EveAniA/17452
+      ---
+
+======================================================================
+
+DUPLICATE GROUP #4 (Documents)
+Media ID: document_6008117750512225006
+Total copies: 5
+--------------------------------------------------
+
+ORIGINAL (KEPT):
+   Message ID: 1625
+   Date: 2024-08-11 17:08:38
+   Link: https://t.me/EveAniA/1625
+
+DELETED DUPLICATES:
+   #1 Message ID: 3466
+      Date: 2024-12-10 11:05:17
+      Link: https://t.me/EveAniA/3466
+      ---
+   #2 Message ID: 4479
+      Date: 2025-02-20 09:52:51
+      Link: https://t.me/EveAniA/4479
+      ---
+   #3 Message ID: 4500
+      Date: 2025-02-20 21:00:27
+      Link: https://t.me/EveAniA/4500
+      ---
+   #4 Message ID: 6188
+      Date: 2025-06-10 21:09:04
+      Link: https://t.me/EveAniA/6188
+      ---
+
+======================================================================
+
+DUPLICATE GROUP #5 (Documents)
+Media ID: document_5968539790088341400
+Total copies: 2
+--------------------------------------------------
+
+ORIGINAL (KEPT):
+   Message ID: 4780
+   Date: 2025-03-18 16:55:56
+   Link: https://t.me/EveAniA/4780
+
+DELETED DUPLICATES:
+   #1 Message ID: 5538
+      Date: 2025-05-13 09:29:54
+      Link: https://t.me/EveAniA/5538
+      ---
+
+======================================================================
+
+DUPLICATE GROUP #6 (Documents)
+Media ID: document_5960551838112551375
+Total copies: 2
+--------------------------------------------------
+
+ORIGINAL (KEPT):
+   Message ID: 5155
+   Date: 2025-04-14 20:10:26
+   Link: https://t.me/EveAniA/5155
+
+DELETED DUPLICATES:
+   #1 Message ID: 5219
+      Date: 2025-04-18 04:41:44
+      Link: https://t.me/EveAniA/5219
+      ---
+
+======================================================================
+
+DUPLICATE GROUP #7 (Documents)
+Media ID: document_6203992057623610279
+Total copies: 2
+--------------------------------------------------
+
+ORIGINAL (KEPT):
+   Message ID: 3587
+   Date: 2024-12-15 20:18:20
+   Link: https://t.me/EveAniA/3587
+
+DELETED DUPLICATES:
+   #1 Message ID: 3765
+      Date: 2024-12-22 19:10:13
+      Link: https://t.me/EveAniA/3765
+      ---
+
+======================================================================
+

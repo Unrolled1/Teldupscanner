@@ -1287,10 +1287,11 @@ def view_reports():
         print("  [2] Auto-Editor Reports")
         print("  [3] Batch Auto-Editor Reports")
         print("  [4] Hashtag Cleaner Reports")
+        print("  [5] Unpin Reports")
         print("  [B] Back")
         print("="*70)
         
-        choice = input("\nChoose (1, 2, 3, 4, or B for back): ").strip()
+        choice = input("\nChoose (1, 2, 3, 4, 5, or B for back): ").strip()
         
         if choice.lower() == 'b':
             return
@@ -1307,6 +1308,9 @@ def view_reports():
         elif choice == '4':
             file_pattern = "hashtag_clean_"
             title = "HASHTAG CLEANER REPORTS"
+        elif choice == '5':
+            file_pattern = "unpin_"
+            title = "UNPIN REPORTS"
         else:
             print("Invalid choice!")
             continue
@@ -1387,24 +1391,72 @@ def create_env_file():
     
     input("\nPress Enter to continue...")
 
+    
+async def run_unpin_messages():
+    """Unpin all messages from channel"""
+
+    print("\n" + "=" * 70)
+    print("  UNPIN ALL MESSAGES")
+    print("=" * 70)
+
+    # Get channel
+    entity = get_channel_input()
+
+    if entity is None:
+        return
+
+    try:
+        chat = await client.get_entity(entity)
+
+    except Exception as e:
+        print(f"Could not find channel: {e}")
+        input("\nPress Enter to continue...")
+        return
+
+    print("\nUnpinning ALL pinned messages...")
+
+    try:
+        await client.unpin_message(chat)
+
+        print("✅ All pinned messages have been unpinned!")
+
+    except FloodWaitError as e:
+
+        print(f"⚠️ Rate limited!")
+        print(f"Waiting {e.seconds} seconds...")
+        print(
+            f"Wait {e.seconds // 60} minutes "
+            f"and {e.seconds % 60} seconds."
+        )
+
+        return
+
+    except Exception as e:
+
+        print(f"❌ Error unpinning messages: {e}")
+
+    input("\nPress Enter to continue...")
+    
+    
 async def main_menu():
     """Main menu with all options - Clean version"""
     while True:
         print("\n" + "="*70)
         print("  DUPLICATE FINDER AND AUTO-EDITOR")
         print("="*70)
-        print("  [1] Duplicate Finder (Find n Delete Duplicate Posts)")
-        print("  [2] Auto-Editor (Auto Edit Any Caption n Text)")
-        print("  [3] Batch Auto-Editor (Auto Edit By Batch)")
-        print("  [4] Hashtag Cleaner (Removes _ From Your Hashtags)")
-        print("  [5] Manage Saved Channels")
-        print("  [6] View Reports")
-        print("  [7] Install Requirements")
-        print("  [8] Create .env File")
-        print("  [9] Exit")
+        print("  [1] Duplicate Finder")
+        print("  [2] Auto-Editor")
+        print("  [3] Batch Auto-Editor")
+        print("  [4] Hashtag Cleaner")
+        print("  [5] Unpin Messages")
+        print("  [6] Manage Saved Channels")
+        print("  [7] View Reports")
+        print("  [8] Install Requirements")
+        print("  [9] Create .env File")
+        print("  [0] Exit")
         print("="*70)
         
-        choice = input("\nEnter your choice (1-9): ").strip()
+        choice = input("\nEnter your choice (0-9): ").strip()
         
         if choice == '1':
             await run_duplicate_finder()
@@ -1415,14 +1467,16 @@ async def main_menu():
         elif choice == '4':
             await run_hashtag_cleaner()
         elif choice == '5':
-            manage_channels()
+            await run_unpin_messages()
         elif choice == '6':
-            view_reports()
+            manage_channels()
         elif choice == '7':
-            install_requirements()
+            view_reports()
         elif choice == '8':
-            create_env_file()
+            install_requirements()
         elif choice == '9':
+            create_env_file()
+        elif choice == '0':
             print("\nGoodbye!")
             sys.exit(0)
         else:
@@ -1444,3 +1498,5 @@ async def main():
 if __name__ == "__main__":
     with client:
         client.loop.run_until_complete(main())
+
+
