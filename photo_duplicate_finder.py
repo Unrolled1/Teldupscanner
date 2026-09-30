@@ -4,18 +4,40 @@ import json
 import asyncio
 import re
 from telethon import TelegramClient
+from telethon.network.connection import ConnectionTcpMTProxyRandomizedIntermediate
 from telethon.errors import SessionPasswordNeededError, FloodWaitError
 from dotenv import load_dotenv
 import getpass
 from collections import defaultdict
 from datetime import datetime
 
+
 load_dotenv()
 
 api_id = int(os.getenv("API_ID"))
 api_hash = os.getenv("API_HASH")
 
-client = TelegramClient("session", api_id, api_hash)
+
+# MTProto Proxy from .env
+PROXY_SERVER = os.getenv("PROXY_SERVER")
+PROXY_PORT = os.getenv("PROXY_PORT")
+PROXY_SECRET = os.getenv("PROXY_SECRET")
+
+if PROXY_SERVER and PROXY_PORT and PROXY_SECRET:
+    print(f"🔒 Using MTProto Proxy: {PROXY_SERVER}:{PROXY_PORT}")
+    client = TelegramClient(
+        "session",
+        api_id,
+        api_hash,
+        connection=ConnectionTcpMTProxyRandomizedIntermediate,
+        proxy=(PROXY_SERVER, int(PROXY_PORT), PROXY_SECRET),
+    )
+else:
+    print("⚠️ No proxy configured, connecting directly...")
+    client = TelegramClient("session", api_id, api_hash)
+
+
+
 
 # Safety settings
 BATCH_SIZE = 50
